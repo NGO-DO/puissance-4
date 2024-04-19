@@ -1,0 +1,67 @@
+#game table {
+    border: 3px blue outset;
+    background-color: blue;
+}
+#game td {
+    width: 2cm;
+    height: 2cm;
+    margin: 0px;
+    padding: 0px;
+    border: 2px blue inset;
+    border-radius: 2cm;
+    background-color: white;
+    cursor: pointer;
+}
+#game td.player1 {
+    background-color: red;
+}
+#game td.player2 {
+    background-color: yellow;
+}
+
+@keyframes falling {
+    0% {
+      transform: translateY(-300%) scale(0.2);
+      opacity: 0;
+    }
+    10% {
+      transform: translateY(0%) scale(0.5);
+      opacity: 0.5;
+    }
+    20% {
+      transform: translateY(0%) scale(0.7);
+      opacity: 0.5;
+    }
+    40% {
+      transform: translateY(0%) scale(0.4);
+      opacity: 0.7;
+    }
+    60% {
+      transform: translateY(0%) scale(0.6);
+      opacity: 0.7;
+    }
+    80% {
+      transform: translateY(0%) scale(0.8);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(0%) scale(1.2) rotate(360deg); /* Augmenter l'échelle et ajouter une rotation */
+      opacity: 1;
+    }
+  }
+  
+  .falling {
+    animation: falling 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .red-token, .yellow-token {
+    border-radius: 50%;
+  }
+  
+  .red-token {
+    background-color: red;
+  }
+  
+  .yellow-token {
+    background-color: yellow;
+  }
